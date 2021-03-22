@@ -1,0 +1,372 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+    overflow: hidden;
+    font-family: "Press Start 2P";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 1600px;
+    margin: auto;
+    z-index: -1;
+}
+
+#title {
+    text-align: center;
+    font-size: 30px;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .glitch {
+    position: relative;
+    color: rgb(6, 98, 184);
+    font-weight: 700;
+    font-size: 45px;
+    transform: scale(2);
+    padding-top: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.content .glitch:before,
+.content .glitch:after {
+    padding-top: 30px;
+    color: rgb(228, 228, 228);
+    content: attr(data-text);
+    position: absolute;
+    width: 453px;
+    height: 100%;
+    /* background: rgb(255, 255, 255); */
+    overflow: hidden;
+    top: 0;
+}
+
+.content .glitch:before {
+    left: -3px;
+    text-shadow: -2px 0 red;
+    animation: glitch-1 10s linear infinite reverse;
+}
+
+.content .glitch:after {
+    left: 3px;
+    text-shadow: -2px 0 whitesmoke;
+    animation: glitch-2 10s linear infinite reverse;
+}
+
+@keyframes glitch-1 {
+    0% {
+        clip: rect(132px, auto, 101px, 30px);
+    }
+
+    5% {
+        clip: rect(17px, auto, 94px, 30px);
+    }
+
+    10% {
+        clip: rect(40px, auto, 66px, 30px);
+    }
+
+    15% {
+        clip: rect(87px, auto, 82px, 30px);
+    }
+
+    20% {
+        clip: rect(137px, auto, 61px, 30px);
+    }
+
+    25% {
+        clip: rect(34px, auto, 14px, 30px);
+    }
+
+    30% {
+        clip: rect(133px, auto, 74px, 30px);
+    }
+
+    35% {
+        clip: rect(76px, auto, 107px, 30px);
+    }
+
+    40% {
+        clip: rect(59px, auto, 130px, 30px);
+    }
+
+    45% {
+        clip: rect(29px, auto, 84px, 30px);
+    }
+
+    50% {
+        clip: rect(22px, auto, 67px, 30px);
+    }
+
+    55% {
+        clip: rect(67px, auto, 62px, 30px);
+    }
+
+    60% {
+        clip: rect(10px, auto, 105px, 30px);
+    }
+
+    65% {
+        clip: rect(78px, auto, 115px, 30px);
+    }
+
+    70% {
+        clip: rect(105px, auto, 13px, 30px);
+    }
+
+    75% {
+        clip: rect(15px, auto, 75px, 30px);
+    }
+
+    80% {
+        clip: rect(66px, auto, 39px, 30px);
+    }
+
+    85% {
+        clip: rect(133px, auto, 73px, 30px);
+    }
+
+    90% {
+        clip: rect(36px, auto, 128px, 30px);
+    }
+
+    95% {
+        clip: rect(68px, auto, 103px, 30px);
+    }
+
+    100% {
+        clip: rect(14px, auto, 100px, 30px);
+    }
+}
+
+@keyframes glitch-2 {
+    0% {
+        clip: rect(129px, auto, 36px, 30px);
+    }
+
+    5% {
+        clip: rect(36px, auto, 4px, 30px);
+    }
+
+    10% {
+        clip: rect(85px, auto, 66px, 30px);
+    }
+
+    15% {
+        clip: rect(91px, auto, 91px, 30px);
+    }
+
+    20% {
+        clip: rect(148px, auto, 138px, 30px);
+    }
+
+    25% {
+        clip: rect(38px, auto, 122px, 30px);
+    }
+
+    30% {
+        clip: rect(69px, auto, 54px, 30px);
+    }
+
+    35% {
+        clip: rect(98px, auto, 71px, 30px);
+    }
+
+    40% {
+        clip: rect(146px, auto, 34px, 30px);
+    }
+
+    45% {
+        clip: rect(134px, auto, 43px, 30px);
+    }
+
+    50% {
+        clip: rect(102px, auto, 80px, 30px);
+    }
+
+    55% {
+        clip: rect(119px, auto, 44px, 30px);
+    }
+
+    60% {
+        clip: rect(106px, auto, 99px, 30px);
+    }
+
+    65% {
+        clip: rect(141px, auto, 74px, 30px);
+    }
+
+    70% {
+        clip: rect(20px, auto, 78px, 30px);
+    }
+
+    75% {
+        clip: rect(133px, auto, 79px, 30px);
+    }
+
+    80% {
+        clip: rect(78px, auto, 52px, 30px);
+    }
+
+    85% {
+        clip: rect(35px, auto, 39px, 30px);
+    }
+
+    90% {
+        clip: rect(67px, auto, 70px, 30px);
+    }
+
+    95% {
+        clip: rect(71px, auto, 103px, 30px);
+    }
+
+    100% {
+        clip: rect(83px, auto, 40px, 30px);
+    }
+}
+
+
+@font-face {
+    font-family: "Press Start 2P";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/pressstart2p/v9/e3t4euO8T-267oIAQAu6jDQyK3nYivN04w.woff2) format("woff2");
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+        U+FE2E-FE2F;
+}
+
+/* cyrillic-ext */
+@font-face {
+    font-family: "Press Start 2P";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/pressstart2p/v9/e3t4euO8T-267oIAQAu6jDQyK3nYivN04w.woff2) format("woff2");
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+        U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+    font-family: "Press Start 2P";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/pressstart2p/v9/e3t4euO8T-267oIAQAu6jDQyK3nRivN04w.woff2) format("woff2");
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* greek */
+@font-face {
+    font-family: "Press Start 2P";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/pressstart2p/v9/e3t4euO8T-267oIAQAu6jDQyK3nWivN04w.woff2) format("woff2");
+    unicode-range: U+0370-03FF;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: "Press Start 2P";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/pressstart2p/v9/e3t4euO8T-267oIAQAu6jDQyK3nbivN04w.woff2) format("woff2");
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+        U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: "Press Start 2P";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/pressstart2p/v9/e3t4euO8T-267oIAQAu6jDQyK3nVivM.woff2) format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+        U+2215, U+FEFF, U+FFFD;
+}
+
+.circles {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    padding-top: 100px;
+}
+
+.circle-1 {
+    background: whitesmoke;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    stroke: rgb(198, 219, 238);
+    stroke-width: 2px;
+    position: relative;
+    padding-right: 10px;
+    margin-top: 113px;
+
+}
+
+.circle-1 .form {
+    text-align: center;
+    text-align-last: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 120px;
+}
+
+.circle-2 {
+    background: #28B1FF;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    stroke: rgb(198, 219, 238);
+    stroke-width: 2px;
+    margin-left: 200px;
+}
+
+.circle-3 {
+    background: rgb(0, 67, 250);
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    stroke: rgb(198, 219, 238);
+    stroke-width: 2px;
+    margin: 68px 0 0 145px;
+}
+
+.circle-3 .result {
+    text-align: center;
+    text-align-last: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 158px;
+}
+
+
+
+
+/* input while click the form */
+.text-form {
+    text-align-last: center;
+    padding-top: 30px;
+    text-justify: auto;
+}
